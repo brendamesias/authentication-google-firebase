@@ -1,5 +1,8 @@
 var provider = new firebase.auth.GoogleAuthProvider();
-firebase.auth().signInWithPopup(provider).then(function(result) {
+
+// autenticando al usuario con google
+document.getElementById("singin").on('click', function() {
+  firebase.auth().signInWithPopup(provider).then(function(result) {
     // Esto le da un token de acceso de Google. Puede usarlo para acceder a la API de Google.
     var token = result.credential.accessToken;
     // La información de usuario iniciada.
@@ -14,4 +17,16 @@ firebase.auth().signInWithPopup(provider).then(function(result) {
     // El tipo firebase.auth.AuthCredential que se usó ...
     var credential = error.credential;
     // ...
+    console.log(user);
+  });
+});
+
+// realizando acciones cuando el usuario este autenticado
+firebase.auth().onAuthStateChanged(function(user) {
+  // si el usuario esta activo
+  if (user) {
+    window.location.href = 'views/main.html';
+  } else {
+    console.log('usuario no logeado');
+  }
 });
