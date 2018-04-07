@@ -1,7 +1,7 @@
 var provider = new firebase.auth.GoogleAuthProvider();
-
+let buttonSingin = document.getElementById("singin");
 // autenticando al usuario con google
-document.getElementById("singin").on('click', function() {
+buttonSingin.on('click', function() {
   firebase.auth().signInWithPopup(provider).then(function(result) {
     // Esto le da un token de acceso de Google. Puede usarlo para acceder a la API de Google.
     var token = result.credential.accessToken;
