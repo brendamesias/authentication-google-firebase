@@ -21,8 +21,11 @@ firebase.auth().onAuthStateChanged(function(user) {
         // mostrando los datos del usuario
         userRef.on('value', function(datasnapshot) {
             var showingName = datasnapshot.child('name').val();
+            console.log(showingName);
             var showingIcon = datasnapshot.child('icon').val();
+            console.log(showingIcon);
             var showingEmail = datasnapshot.child('email').val();
+            console.log(showingEmail);
             $('#name').text(showingName);
             $('#email').text(showingEmail);
             $('#icon img').replaceWith('<img src="' + showingIcon + '">')
