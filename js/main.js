@@ -2,9 +2,13 @@ firebase.auth().onAuthStateChanged(function(user) {
     if (user) {
         // obteniendo datos desde la cuenta de google del usuario
         var email = user.email;
+        console.log(email);
         var name = user.displayName;
+        console.log(name);
         var icon = user.photoURL;
+        console.log(icon);
         var userCode = user.uid;
+        console.log(userCode);
         // haciendo referencia al espacio exclusivo creado para el usuario en la basedatos
         var userRef = firebase.database().ref('users').child(userCode);
         // guardando datos del usuario en la base datos
