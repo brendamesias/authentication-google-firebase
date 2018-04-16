@@ -1,0 +1,23 @@
+{
+  "name": "prueba-firebase",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/brendamesias/authentication-google-firebase.git"
+  },
+  "keywords": [],
+  "author": "Brenda Mesias Villar <brendamesiasvillar@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/brendamesias/authentication-google-firebase/issues"
+  },
+  "homepage": "https://github.com/brendamesias/authentication-google-firebase#readme",
+  "dependencies": {
+    "googleapis": "^27.0.0"
+  }
+}
